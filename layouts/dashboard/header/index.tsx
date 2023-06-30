@@ -6,7 +6,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 
 const DashboardHeader = () => {
   return (
-    <div className="fixed lg:static inset-0 w-full max-h-[50px] lg:max-h-[70px] bg-white border-b z-40">
+    <div>
       <div className="lg:static w-[93%] lg:w-[90%] mx-auto py-[10px] lg:py-[10px] flex justify-between items-center">
         {/* search bar */}
         <div className="flex border-gray-300 gap-2 px-4 py-2 rounded-md items-center border ">

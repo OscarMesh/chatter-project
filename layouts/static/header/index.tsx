@@ -65,7 +65,10 @@ const Header = () => {
                   hover:text-primary
                   "
       >
-        <RxHamburgerMenu size={30} onClick={() => setIsMobile(!isMobile)} />
+        <RxHamburgerMenu
+          size={30}
+          onClick={() => setIsMobile((prev) => !prev)}
+        />
       </div>
 
       {isMobile && <MobileNav isMobile={isMobile} setIsMobile={setIsMobile} />}

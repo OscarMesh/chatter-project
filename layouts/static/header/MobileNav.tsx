@@ -26,7 +26,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ setIsMobile, isMobile }) => {
       <div className="flex flex-end justify-end gap-4 items-center p-4">
         <div
           className="tranition duration-500 delay-150 cursor-pointer ease-in-out hover:text-primary"
-          onClick={() => setIsMobile && setIsMobile(!isMobile)}
+          onClick={() => setIsMobile && setIsMobile((prev) => !prev)}
         >
           <AiOutlineClose size={30} />
         </div>

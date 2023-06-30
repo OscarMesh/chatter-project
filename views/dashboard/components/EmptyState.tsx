@@ -1,13 +1,13 @@
-const EmptyState = () => {
+interface EmptyStateProps {
+  text?: string;
+  title: string;
+}
+
+const EmptyState: React.FC<EmptyStateProps> = ({ text, title }) => {
   return (
     <div
       className="
-          px-4 
-          py-10 
-          sm:px-6 
-          lg:px-8 
-          lg:py-6 
-          h-screen 
+          h-[calc(100vh-70px)] 
           flex 
           justify-center 
           items-center 
@@ -15,9 +15,8 @@ const EmptyState = () => {
         "
     >
       <div className="text-center items-center flex flex-col">
-        <h3 className="mt-2 text-2xl font-semibold text-gray-900">
-          No post found yet, you can start by creating one.
-        </h3>
+        <h3 className="mt-2 text-2xl font-semibold text-gray-900">{title}</h3>
+        <p className="mt-4 text-gray-400 text-sm">{text}</p>
       </div>
     </div>
   );

@@ -25,11 +25,13 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       <div className="w-[250px] fixed h-full top-0 left-0 bottom-0 bg-white border-r border-gray-300">
         <DesktopSidebar />
       </div>
-      <div className="w-[calc(100%-250px)]  ml-auto h-full relative bg-white">
-        <div>
+      <div className="w-[calc(100%-250px)]  ml-auto h-full relative">
+        <div className="fixed w-[calc(100%-250px)] border-b z-40 bg-white ">
           <DashboardHeader />
         </div>
-        <div>{children}</div>
+        <div className="absolute top-[70px] w-full p-6 z-0">
+          {children}
+        </div>
       </div>
     </main>
   );
